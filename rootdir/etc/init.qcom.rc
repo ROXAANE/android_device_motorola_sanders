@@ -61,7 +61,7 @@ on fs
     chmod 0771 /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
     mkdir /mnt/vendor/persist/bms 0700 root system
-    restorecon_recursive /mnt/vendor/persist
+    mkdir /persist/data/vendor 0700 system system
 
 on late-fs
     # Start services for bootanim
@@ -347,6 +347,10 @@ on boot
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
+    # Create directory for QC time services
+    mkdir /persist/time 0770 system system
+    restorecon_recursive /persist
+
     # Create directory used for display
     mkdir /persist/display 0770 system graphics
 
@@ -488,10 +492,10 @@ on post-fs-data
     mkdir /data/hostapd 0770 system wifi
 
     # Create /data/vendor/time folder for time-services
-    mkdir /data/vendor/time/ 0700 system system
+    mkdir /data/vendor/time/ 0770 system system
 
     # Create /data/vendor/time folder for time-services
-    mkdir /data/vendor/time/ 0700 system system
+    mkdir /data/vendor/time/ 0770 system system
 
     #Create a folder for SRS to be able to create a usercfg file
     #mkdir /data/data/media 0770 media media
