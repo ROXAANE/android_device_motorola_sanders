@@ -60,6 +60,7 @@ on fs
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
+    mkdir /persist/data 0700 system system
     mkdir /mnt/vendor/persist/bms 0700 root system
     restorecon_recursive /mnt/vendor/persist
 
@@ -519,6 +520,9 @@ on post-fs-data
     #Create SWAP related dirs
     mkdir /data/vendor/swap 0770 root system
     chmod 2770 /data/vendor/swap
+
+    # Create /data/time folder for time-services
+    mkdir /data/time/ 0770 system system
 
     # Force all SSR systems to 'related' so they attempt
     # self-recovery without rebooting the device
