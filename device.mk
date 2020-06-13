@@ -146,7 +146,10 @@ PRODUCT_PACKAGES += \
     libgenlock \
     libtinyxml \
     libdisplayconfig \
-    libqdMetaData.system
+    libdisplayconfig.vendor \
+    libqdMetaData \
+    libqdMetaData.system \
+    libqdMetaData.vendor
 
 PRODUCT_PACKAGES += \
     vendor.display.color@1.0-service \
@@ -497,6 +500,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
 # Wi-Fi Display
+PRODUCT_PACKAGES += \
+    libnl \
+    libwfdaac
+
 #PRODUCT_BOOT_JARS += \
     WfdCommon
 

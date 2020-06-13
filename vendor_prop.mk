@@ -332,6 +332,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rmnet.data.enable=true \
     persist.rmnet.mux=enabled
 
+# SurfaceFlinger
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
+    ro.surface_flinger.protected_contents=true
+
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.pmd=false \
@@ -412,3 +417,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.xtended.maintainer=Ashwatthama
+
+#WFD
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.debug.wfd.enable=1 \
+    vendor.video.disable.ubwc=1 \
+    persist.sys.wfd.virtual=0 \
+    vendor.gralloc.disable_wb_ubwc=1 \
+    persist.sys.wfd.nohdcp=1
