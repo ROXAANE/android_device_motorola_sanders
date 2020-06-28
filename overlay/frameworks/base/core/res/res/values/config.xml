@@ -657,4 +657,9 @@
     <string name="config_performance_profile" translatable="false">1</string>
     <string name="config_powersave_profile" translatable="false">2</string>
     <string name="config_screen_off_profile" translatable="false">2</string>
+
+    <!-- Battery Health -->
+    <string name="config_batDesCap">/sys/class/power_supply/bms/charge_full</string>
+    <string name="config_batCurCap">/sys/class/power_supply/bms/charge_now_raw</string>
+    <string name="config_batChargeCycle">/sys/class/power_supply/bms/cycle_count</string>
 </resources>
