@@ -854,6 +854,7 @@ vendor/lib/libdsutils.so
 vendor/lib/libevent_observer.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
+vendor/lib64/libfastcvopt.so
 vendor/lib/libflash_aw3641.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libflash_sky81298.so

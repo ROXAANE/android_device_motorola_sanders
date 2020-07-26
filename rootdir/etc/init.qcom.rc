@@ -1041,6 +1041,9 @@ on property:ro.boot.ram=4GB
     #WDSP FW boot sysfs node used by STHAL
     chown media audio /sys/kernel/wdsp0/boot
 
+    # Chown node for Smart_Charging
+    chown system system /sys/class/power_supply/battery/battery_charging_enabled
+
     #CPE fw_name used by sound trigger HAL
     chown media audio /sys/kernel/wcd_cpe0/fw_name
 
