@@ -77,17 +77,22 @@
                 android:targetClass="com.moto.actions.dirac.DiracActivity" />
         </Preference>
 
-        <ListPreference
-        android:key="spectrum"
-        android:title="@string/spectrum_title"
-        android:summary="@string/spectrum_summary"
-        android:defaultValue="0"
-        android:entries="@array/spectrum_profiles"
-        android:entryValues="@array/spectrum_values"
-        android:dialogTitle="@string/spectrum_dialogTitle"
-	android:icon="@drawable/ic_settings_spectrum"/>
-	    <intent
-		android:targetPackage="com.moto.actions"
-		android:targetClass="com.moto.actions.ShitPanelSettings" />         
-   </PreferenceCategory>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="spectrum_category"
+        android:title="@string/spectrum_title">
+       
+        <Preference
+           android:key="spectrum_profiles"
+           android:title="@string/spectrum_prof_title"
+           android:summary="@string/spectrum_prof_summary"
+           android:icon="@drawable/ic_settings_spectrum"
+           android:persistent="false" >
+           <intent 
+                android:targetPackage="com.moto.actions"
+                android:targetClass="com.moto.actions.spectrum.SpectrumProfilesActivity" />
+           </Preference>
+
+    </PreferenceCategory>
 </PreferenceScreen>
